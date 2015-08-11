@@ -32,7 +32,7 @@
 
 
 /**
- * extended audio codec parameters
+ * Extended audio codec parameters
  */
 
 #define AUDIO_OFFLOAD_CODEC_WMA_FORMAT_TAG "music_offload_wma_format_tag"
@@ -42,16 +42,16 @@
 #define AUDIO_OFFLOAD_CODEC_WMA_ENCODE_OPTION "music_offload_wma_encode_option"
 #define AUDIO_OFFLOAD_CODEC_WMA_ENCODE_OPTION1 "music_offload_wma_encode_option1"
 #define AUDIO_OFFLOAD_CODEC_WMA_ENCODE_OPTION2 "music_offload_wma_encode_option2"
-#define AUDIO_OFFLOAD_CODEC_FORMAT  "music_offload_codec_format"
+#define AUDIO_OFFLOAD_CODEC_FORMAT "music_offload_codec_format"
 #define AUDIO_OFFLOAD_CODEC_FLAC_MIN_BLK_SIZE "music_offload_flac_min_blk_size"
 #define AUDIO_OFFLOAD_CODEC_FLAC_MAX_BLK_SIZE "music_offload_flac_max_blk_size"
 #define AUDIO_OFFLOAD_CODEC_FLAC_MIN_FRAME_SIZE "music_offload_flac_min_frame_size"
 #define AUDIO_OFFLOAD_CODEC_FLAC_MAX_FRAME_SIZE "music_offload_flac_max_frame_size"
 
-/* Query handle fm parameter*/
+/* Query handle FM parameter */
 #define AUDIO_PARAMETER_KEY_HANDLE_FM "handle_fm"
 
-/* Query fm volume */
+/* Query FM volume */
 #define AUDIO_PARAMETER_KEY_FM_VOLUME "fm_volume"
 
 /* Query Fluence type */
@@ -60,19 +60,19 @@
 #define AUDIO_PARAMETER_VALUE_DUALMIC "dualmic"
 #define AUDIO_PARAMETER_KEY_NO_FLUENCE "none"
 
-/* Query if surround sound recording is supported */
+/* Query if Surround Sound Recording is supported */
 #define AUDIO_PARAMETER_KEY_SSR "ssr"
 
-/* Query if a2dp  is supported */
+/* Query if A2DP is supported */
 #define AUDIO_PARAMETER_KEY_HANDLE_A2DP_DEVICE "isA2dpDeviceSupported"
 
-/* Query ADSP Status */
+/* Query ADSP status */
 #define AUDIO_PARAMETER_KEY_ADSP_STATUS "ADSP_STATUS"
 
-/* Query Sound Card Status */
+/* Query sound card status */
 #define AUDIO_PARAMETER_KEY_SND_CARD_STATUS "SND_CARD_STATUS"
 
-/* Query if Proxy can be Opend */
+/* Query if Proxy can be opened */
 #define AUDIO_PARAMETER_KEY_CAN_OPEN_PROXY "can_open_proxy"
 
 #endif /* AUDIO_DEFS_H */
