@@ -3530,10 +3530,9 @@ char **nxt_str, int verb_index, int ctrl_list_type)
         } else if (strcasestr(current_str, "EC_REF_RXMixerCTL") != NULL) {
             ret = snd_ucm_extract_ec_ref_rx_mixer_ctl(current_str,
                       &list->ec_ref_rx_mixer_ctl);
-            ALOGV("EC_REF_RX mixer ctl: ret:%d\n", ret);
             if (ret < 0)
                 break;
-            ALOGE("EC_REF_RX mixer ctl: %s\n", list->ec_ref_rx_mixer_ctl);
+            ALOGV("EC_REF_RX mixer ctl: %s\n", list->ec_ref_rx_mixer_ctl);
         }
         if (strcasestr(current_str, "EnableSequence") != NULL) {
             controls_count = get_controls_count(next_str);
