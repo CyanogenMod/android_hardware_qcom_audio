@@ -36,10 +36,6 @@ ifneq ($(filter msm8994,$(TARGET_BOARD_PLATFORM)),)
 endif
 endif
 
-ifneq ($(filter msm8960,$(TARGET_BOARD_PLATFORM)),)
-  LOCAL_CFLAGS += -DMAX_TARGET_SPECIFIC_CHANNEL_CNT="2"
-endif
-
 LOCAL_SRC_FILES := \
 	audio_hw.c \
 	voice.c \
@@ -107,6 +103,19 @@ ifneq ($(filter msm8992 msm8994,$(TARGET_BOARD_PLATFORM)),)
   LOCAL_CFLAGS += -DHWDEP_CAL_ENABLED
   LOCAL_SRC_FILES += audio_extn/hwdep_cal.c
 endif
+
+ifeq ($(strip $(AUDIO_FEATURE_ENABLED_PCM_OFFLOAD)),true)
+    LOCAL_CFLAGS += -DPCM_OFFLOAD_ENABLED
+endif
+
+ifeq ($(strip $(AUDIO_FEATURE_ENABLED_FLAC_OFFLOAD)),true)
+    LOCAL_CFLAGS += -DFLAC_OFFLOAD_ENABLED
+    LOCAL_CFLAGS += -DPCM_OFFLOAD_ENABLED
+    LOCAL_CFLAGS += -DCOMPRESS_METADATA_NEEDED
+endif
+
+LOCAL_COPY_HEADERS_TO   := mm-audio
+LOCAL_COPY_HEADERS      := audio_extn/audio_defs.h
 
 LOCAL_MODULE := audio.primary.$(TARGET_BOARD_PLATFORM)
 
