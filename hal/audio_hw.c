@@ -3875,6 +3875,10 @@ static int adev_open(const hw_module_t *module, const char *name,
         }
     }
 
+    property_get("audio_hal.k_enable_extended_precision", value, NULL);
+    if (!(atoi(value) || !strncmp("false", value, 5)))
+        k_enable_extended_precision = false;
+
     if (k_enable_extended_precision)
         adev_verify_devices(adev);
 
